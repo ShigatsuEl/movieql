@@ -3,7 +3,7 @@ import { people, getById } from "./db";
 const resolver = {
   Query: {
     people: () => people,
-    person: () => getById,
+    person: (_, { id }) => getById(id),
   },
 };
 
